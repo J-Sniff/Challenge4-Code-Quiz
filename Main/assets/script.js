@@ -39,3 +39,45 @@ function deductTime(seconds) {
 function stopTimer() {
     clearInterval(timerInterval);
 }
+
+function showQuestion(index) {
+    var questions = [
+        {
+            question: "Who does Andy give the nickname 'big tuna' to?",
+            answers: [
+                { text: 'Jim Halpert', correct: true },
+                { text: 'Michael Scott', correct: false },
+                { text: 'Ryan Howard', correct: false },
+                { text: 'kevin Malone', correct: false },
+            ]
+
+        },
+        {
+            question: "Where did Jim propose to Pam?",
+            answer: [
+                { text: 'Gas Station', correct: true },
+                { text: 'Niagra Falls', correct: false },
+                { text: 'On the rooftop of Dunder Mifflin', correct: false },
+                { text: 'Inside the Office', correct: false },
+            ]
+        },
+        {
+            question: "What Ivy League school did Andy go to?",
+            answer: [
+                { text: 'Cornell', correct: true },
+                { text: 'Harvard', correct: false },
+                { text: 'Dartmouth', correct: false },
+                { text: 'Yale', correct: false },
+            ]
+        },
+        {
+            question: "How does Stanley spend his time during conference room meetings?"
+            answer: [
+                { text: 'Crossword Puzzles', correct: true },
+                { text: 'On Facebook', correct: false },
+                { text: 'Whispering with Others', correct: false },
+                { text: 'Listening to his headphones', correct: false },
+            ]
+        }
+    ]
+}
