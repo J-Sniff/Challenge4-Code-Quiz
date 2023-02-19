@@ -71,7 +71,7 @@ function showQuestion(index) {
             ]
         },
         {
-            question: "How does Stanley spend his time during conference room meetings?"
+            question: "How does Stanley spend his time during conference room meetings?",
             answer: [
                 { text: 'Crossword Puzzles', correct: true },
                 { text: 'On Facebook', correct: false },
