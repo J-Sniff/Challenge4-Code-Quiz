@@ -47,11 +47,23 @@
     <section class="last-page">
         <article class="all-done">You have completed all questions!</article>
         <p id="final-score">Your final score is </p>
-        <form>
+        <form class="final-form">
             <label>Enter Initials</label>
-            <input type="text">
+            <input id="initials">
             <button class="btn final-btn">Submit</button>
         </form>
+        <button class="play-again">Play Again?</button>
+        <div class="message-div"></div>
+    </section>
+
+    <section class="highscores-container">
+        <div class="highscore-text">
+            <h3>Highscores</h3>
+            <ul id="highscore-list"></ul>
+            <button id="highscore-btn" class="go-back">Go Back</button>
+            <button id="highscore-btn" class="go-back-2">Go Back</button>
+            <button id="highscore-btn" class="clear-highscore">Clear Score</button>
+        </div>
     </section>
     
     <script src="assets\script.js"></script>
