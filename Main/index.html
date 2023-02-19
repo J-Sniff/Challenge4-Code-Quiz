@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeQuiz</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Are you smarter than a fourth grader?!</h1>
+        <button class="highscore-btn">View Highscores</button>
+    </header>
+    
+    <section class="timer">
+        <div class="timer-text">Beat the clock!</div>
+        <h3>60 Second(s)</h3>
+    </section>
+
+<!--------------------------------------------------------- Here ---------------------------------------------------------->
+
+    <section class="quiz-container">
+        <div id="questions-container">
+            <div id="question">Question</div>
+            <div id="answer-btns">
+                <button class="btn" id="answer-a">Answer A</button>
+                <button class="btn" id="answer-b">Answer B</button>
+                <button class="btn" id="answer-c">Answer C</button>
+                <button class="btn" id="answer-d">Answer D</button>
+            </div>
+            <div id="right-wrong"></div>
+        </div>
+    </section>
+
+    <section class="last-page">
+        <article class="all-done">You have completed all questions!</article>
+        <p id="final-score">Your final score is </p>
+        <form>
+            <label>Enter Initials</label>
+            <input type="text">
+            <button class="final-btn">Sybmit</button>
+        </form>
+    </section>
+    
+    <script src="main\assets\script.js"></script>
+</body>
+</html>
