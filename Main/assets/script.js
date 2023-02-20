@@ -73,7 +73,7 @@ var questions = [
     },
     {
         question: "Where did Jim propose to Pam?",
-        answer: [
+        answers: [
             { text: 'Gas Station', correct: true },
             { text: 'Niagra Falls', correct: false },
             { text: 'On the rooftop of Dunder Mifflin', correct: false },
@@ -82,7 +82,7 @@ var questions = [
     },
     {
         question: "What Ivy League school did Andy go to?",
-        answer: [
+        answers: [
             { text: 'Cornell', correct: true },
             { text: 'Harvard', correct: false },
             { text: 'Dartmouth', correct: false },
@@ -91,7 +91,7 @@ var questions = [
     },
     {
         question: "How does Stanley spend his time during conference room meetings?",
-        answer: [
+        answers: [
             { text: 'Crossword Puzzles', correct: true },
             { text: 'On Facebook', correct: false },
             { text: 'Whispering with Others', correct: false },
@@ -100,7 +100,7 @@ var questions = [
     },
     {
         question: "What does Jim hide Dwight's stapler in?",
-        answer: [
+        answers: [
             { text: 'Jello', correct: true },
             { text: 'Cake', correct: false },
             { text: 'Pudding', correct: false },
@@ -121,10 +121,10 @@ function showQuestion(index) {
     } 
 
     document.getElementById( "question" ).innerHTML = questions[index].question;
-    document.getElementById( "answer-a" ).innerHTML = questions[index].answer[0].text;
-    document.getElementById( "answer-b" ).innerHTML = questions[index].answer[1].text;
-    document.getElementById( "answer-c" ).innerHTML = questions[index].answer[2].text;
-    document.getElementById( "answer-d" ).innerHTML = questions[index].answer[3].text;
+    document.getElementById( "answer-a" ).innerHTML = questions[index].answers[0].text;
+    document.getElementById( "answer-b" ).innerHTML = questions[index].answers[1].text;
+    document.getElementById( "answer-c" ).innerHTML = questions[index].answers[2].text;
+    document.getElementById( "answer-d" ).innerHTML = questions[index].answers[3].text;
 }
 
 if (index <= 3) {
@@ -199,18 +199,54 @@ finalButton.addEventListener( "click", function(event) {
     }
 
     highscorePage.style.display = "flex";
-    finalPage.style.display = "none";
+    lastPage.style.display = "none";
 
     highscore.push({ initials, timeLeft });
 
-    localStorage.setItem("highscores", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(highscore));
     console.log(highscore);
 
     highscoreList.innerHTML = "";
     for (var i = 0; i < highscore.length; i++) {
         var li = document.createElement("li");
-        li.textContent = highscore[i].initials + " + " + highscore[i].timeLeft;
+        li.textContent = highscore[i].initials + " - " + highscore[i].timeLeft;
         highscoreList.appendChild(li);
     }
 
+});
+
+goBack.addEventListener('click', function () {
+    lastPage.style.display = "flex";
+    highscorePage.style.display = "none";
+});
+
+goBack2.addEventListener('click', function () {
+    lastPage.style.display = "flex";
+    highscorePage.style.display = "none";
+});
+
+clearHighscore.addEventListener('click', function() {
+    localStorage.clear();
+    highscoreList.textContent = "";
+});
+
+playAgain.addEventListener('click', function () {
+    lastPage.style.display = "none";
+    startPage.style.display = "flex";
+    location.reload();
+});
+
+viewHighscore.addEventListener('click', function() {
+    startPage.style.display = "none";
+    quizPage.style.display = "none";
+    lastPage.style.display = "none";
+    highscorePage.style.display = "flex";
+    goBack2.style.display = "block";
+
+    highscoreList.innerHTML = "";
+    for (var i = 0; i < highscore.length; i++) {
+        var li = document.createElement("li");
+        li.textContent = highscore[i].initials + " - " + highscore[i].timeLeft;
+        highscoreList.appendChild(li);
+    }
 });
