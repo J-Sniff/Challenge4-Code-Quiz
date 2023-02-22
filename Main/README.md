@@ -10,4 +10,4 @@ Test your knowledge on five strenuous questions even the actors and actresses on
 
 To get started simply click on start. Make sure when you press start that you are ready as the clock will start counting down as soon as you click on the start button. Pick an answer from the 4 options displayed. Remember when you are done to enter your intials for the highscore so you can get your bragging rights!
 
-# *~GOOD LUCK, HAVE FUN!~*
+# ~*GOOD LUCK, HAVE FUN!*~
